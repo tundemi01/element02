@@ -115,12 +115,12 @@
 ;; checks roomsdb hash table and returns value of an attribute in the roomsdb
 (define (get-room-item id field)
   ;; checks whether there is any association to id in roomsdb
-  (if (hash-table-exists? roomsdb id)
-      (let ((record (hash-table-ref roomsdb id)))
-        (if (memq field '(closed key end))
-          (cadr (assq field record))
-          "wrong field type"))
-      "no such room"))
+  ;;(if (hash-table-exists? roomsdb id)
+     ;; (let ((record (hash-table-ref roomsdb id)))
+        ;;(if (memq field '(closed key end))
+          ;;(cadr (assq field record))
+         ;; "wrong field type"))
+     ;; "no such room"))
 
 ;; checks roomsdb and returns the list with given room id
 (define (get-room id)
